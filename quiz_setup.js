@@ -67,6 +67,9 @@ function validateQuiz() {
 	}
 	
 	// Not sure if we want to validate the radio buttons. Maybe only if time is left on the timer?
+	if (flag) {
+		enableQuiz();
+	}
 	
 	return flag;
 }
