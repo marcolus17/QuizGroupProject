@@ -54,6 +54,25 @@ function enableQuiz() {
 	submitButton.disabled = false;
 }
 
+// Disable the radio buttons in the quiz
+function disableQuiz() {
+	for (var i = 0; i < qOneRadios.length; i++) {
+		qOneRadios[i].disabled = true;
+	}
+	for (var i = 0; i < qTwoRadios.length; i++) {
+		qTwoRadios[i].disabled = true;
+	}
+	for (var i = 0; i < qThreeRadios.length; i++) {
+		qThreeRadios[i].disabled = true;
+	}
+	for (var i = 0; i < qFourRadios.length; i++) {
+		qFourRadios[i].disabled = true;
+	}
+	for (var i = 0; i < qFiveRadios.length; i++) {
+		qFiveRadios[i].disabled = true;
+	}
+}
+
 // Validate the quiz before submitting it
 function validateQuiz() {
 	var flag = true;
@@ -66,7 +85,7 @@ function validateQuiz() {
 		alert("Please enter your name (ex. John Smith).");
 	}
 	
-	// Not sure if we want to validate the radio buttons. Maybe only if time is left on the timer?
+	// Re-enable the radio buttons so that the POST method works
 	if (flag) {
 		enableQuiz();
 	}
